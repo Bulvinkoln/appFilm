@@ -12,7 +12,7 @@
 
 4) Потренироваться и переписать цикл еще двумя способами*/
 
-const numberOfFilms = +prompt('Сколько фильмов вы уже посмотрели?', '2');
+const numberOfFilms = +prompt('Сколько фильмов вы уже посмотрели?', '');
 const personalMovieDB = {
     count: numberOfFilms ,
     movies: {
@@ -22,12 +22,18 @@ const personalMovieDB = {
     genres: [],
     privat: false
 };
-const firstAnswerLastFilm = prompt('Один из последних просмотренных фильмов?', 'Хищник');
-const firstScoreFilm = prompt('На сколько оцените его?', '9');
-const secondAnswerLastFilm = prompt('Один из последних просмотренных фильмов?', 'Соник');
-const secondScoreFilm = prompt('На сколько оцените его?', '8');
-personalMovieDB.movies[firstAnswerLastFilm] = firstScoreFilm;
-personalMovieDB.movies[secondAnswerLastFilm] = secondScoreFilm;
+// const firstAnswerLastFilm = prompt('Один из последних просмотренных фильмов?', 'Хищник');
+// const firstScoreFilm = +prompt('На сколько оцените его?', '9');
+// const secondAnswerLastFilm = prompt('Один из последних просмотренных фильмов?', 'Соник');
+// const secondScoreFilm = +prompt('На сколько оцените его?', '8');
+// personalMovieDB.movies[firstAnswerLastFilm] = firstScoreFilm;
+// personalMovieDB.movies[secondAnswerLastFilm] = secondScoreFilm;
+
+for(let i = 0; i < 2; i++) {
+    const firstAnswerLastFilm = prompt('Один из последних просмотренных фильмов?', '');
+    const firstScoreFilm = +prompt('На сколько оцените его?', '');
+    personalMovieDB.movies[firstAnswerLastFilm] = firstScoreFilm;
+}
 
 // Проверить, чтобы все работало без ошибок в консоли
 console.log(personalMovieDB);
